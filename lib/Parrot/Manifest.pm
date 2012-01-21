@@ -70,7 +70,9 @@ sub new {
     my @versioned_files;
     my @versioned_output = split /\n/, $lsfiles;
     for my $filename (@versioned_output) {
-        next if $filename =~ m[/\.git|^blib|^ports];
+        next if $filename =~ m[^(blib|ports)];
+        next if ($filename =~ m[/\.git] and
+            basename($filename) ne '.gitattributes');
         push @versioned_files, $filename;
     }
     $data{versioned_files} = \@versioned_files;
