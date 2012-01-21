@@ -2322,6 +2322,7 @@ clean : \
 	$(RM_F) $(FLUID_FILES_2)
 	$(RM_RF) lib/Parrot/OpLib
 	$(RM_RF) runtime/parrot/languages/data_json
+	$(RM_RF) runtime/parrot/languages/JSON/JSON.pir
 	$(RM_F) $(NQP_CLEANUPS) $(PGE_CLEANUPS) $(TGE_CLEANUPS)
 	$(RM_F) $(PCT_CLEANUPS) $(DATA_JSON_CLEANUPS)
 	$(RM_F) $(DYNOPLIBS_CLEANUPS) $(DYNPMC_CLEANUPS)
@@ -2333,6 +2334,7 @@ clean : \
 prog-clean :
 	$(RM_F) \
 	$(O_FILES) \
+	frontend/parrot/main$(O) \
 	$(PARROT) \
 	$(MINIPARROT) \
 	$(LIBPARROT) \
