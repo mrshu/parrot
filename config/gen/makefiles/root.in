@@ -2338,6 +2338,7 @@ prog-clean :
 	$(PARROT) \
 	$(MINIPARROT) \
 	$(LIBPARROT) \
+#IF(cygwin):  libparrot.dll.a \
 	$(INSTALLABLEOPS2C) \
 	$(INSTALLABLEPARROT) \
 	$(INSTALLABLEDIS) \
